@@ -48,6 +48,13 @@
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eL-SH-c7c"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQN-BC-bi9">
+                                <rect key="frame" x="80" y="497" width="248" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -55,6 +62,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="jSy-FF-7zr" id="WGC-H0-yf4"/>
                         <outlet property="passwordTextField" destination="CyF-J4-eL5" id="sdH-Gt-CSh"/>
+                        <outlet property="resultLabel" destination="QQN-BC-bi9" id="qQR-PL-aYO"/>
                         <segue destination="vTs-Vy-5Fg" kind="show" identifier="detailSegue" id="pO8-ZS-zPu"/>
                     </connections>
                 </viewController>
@@ -80,6 +88,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goBackTapped:" destination="vTs-Vy-5Fg" eventType="touchUpInside" id="n3H-Mj-SQB"/>
+                                    <segue destination="Stg-pc-672" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="yPJ-fF-aUT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TT-W3-1FL">
@@ -99,6 +108,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxL-3N-b1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Stg-pc-672" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="88.392857142857139"/>
         </scene>
